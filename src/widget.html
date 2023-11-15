@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShiBot Widget</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="/src/widget.css">
+</head>
+
+<body>
+    <button class="chatbot-toggler">
+        <span class="material-symbols-outlined">
+            mode_comment
+        </span>
+        <span class="material-symbols-outlined">
+            close
+        </span>
+    </button>
+    <div class="chatbot">
+        <header>
+            <h2>Welcome!</h2>
+            <span class="close-btn material-symbols-outlined">
+                close
+            </span>
+            <div class="logo">
+                To ShiBOT live chat with AI company.<br>
+                We're always online and ready to chat!
+            </div>
+        </header>
+        <ul class="chatbox" id="chatbot-container">
+            <li class="chat incoming">
+                <span class="material-symbols-outlined">
+                    smart_toy
+                </span>
+                <p>Hi! How can I help you?</p>
+            </li>
+            <div class="parent-container">
+                <li class="chat quick-reply">
+                    <button class="quick-reply-button">Choose option</button>
+                    <button class="quick-reply-button">Замовити</button>
+                    <button class="quick-reply-button">Замовити</button>
+                </li>
+            </div>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Введіть повідомлення..." required></textarea>
+            <span class="material-symbols-outlined" id="send-button">send</span>
+            <span class="material-symbols-outlined" id="mood-menu">mood</span>
+            <span class="material-symbols-outlined" id="drop-menu">more_vert</span>
+        </div>
+        <div class="menu" id="menu">
+            <ul>
+                <li class="menu-active" id="report-issue">Report an issue <span class="material-symbols-outlined">flag</span></li>
+            </ul>
+        </div>
+        <!-- Emoji Container -->
+        <div class="emoji-menu menu" id="emoji-menu">
+            <div class="emoji-div">
+                <ul class="emoji-list">
+                    <li class="menu-active" data-emoji="😀"><!-- Add an emoji button with the id "emoji" -->
+                        <div class="emoji" id="emoji">😀</div>
+                    </li>
+                    <li class="menu-active" data-emoji="😎">
+                        <div class="emoji" id="emoji">😎</div>
+                    </li>
+                    </li>
+                    <li class="menu-active" data-emoji="👍">
+                        <div class="emoji" id="emoji">👍</div>
+                    </li>
+                    <li class="menu-active" data-emoji="😩">
+                        <div class="emoji" id="emoji">😩</div>
+                    </li>
+                    <li class="menu-active" data-emoji="😅">
+                        <div class="emoji" id="emoji">😅</div>
+                    </li>
+                    <li class="menu-active" data-emoji="😍">
+                        <div class="emoji" id="emoji">😍</div>
+                    </li>
+                    <li class="menu-active" data-emoji="😠">
+                        <div class="emoji" id="emoji">😠</div>
+                    </li>
+                    <li class="menu-active" data-emoji="🙏">
+                        <div class="emoji" id="emoji">🙏</div>
+                    </li>
+                    <li class="menu-active" data-emoji="👋">
+                        <div class="emoji" id="emoji">👋</div>
+                    </li>
+                    </ul>
+            </div>
+        </div>            
+        <div class="emojis">
+            <i class="fa-solid fa-thumbs-down"></i>
+            <i class="fa-solid fa-thumbs-up"></i>
+            <!-- Your emoji container -->
+        </div>
+    </div>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/shibotgit/tt/bundle.js" data-custom-options='{
+        "chatbotBackground": "yellow",
+        "chatbotTogglerBackground": "green",
+        "text": ["Button 4", "Button 2"],
+        "quickReplyBackground": "lightblue",
+        "quickReplyButtonBackground": "lightgreen",
+        "buttonMessages": {
+            "quick-reply-button-0": "Custom Message for Button 1",
+            "quick-reply-button-1": "Custom Message for Button 2"
+        }
+    }'></script>
+</body>
+</html>
